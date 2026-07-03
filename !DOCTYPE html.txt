@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MexCloud Store</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f1a;
+    color: white;
+}
+header {
+    background: linear-gradient(90deg, #a855f7, #06b6d4);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.container {
+    padding: 15px;
+}
+.category {
+    background: #111827;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid #2d3748;
+}
+.category:hover {
+    background: #1f2937;
+}
+.subcategory, .product {
+    display: none;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.item {
+    background: #1f2937;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+}
+.button {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 12px;
+    background: #06b6d4;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<header>
+MexCloud Store
+</header>
+
+<div class="container">
+
+<div class="category" onclick="toggle('obat')">💊 Obat Indonesia</div>
+<div id="obat" class="subcategory">
+    <div class="item">Panadol - $3<br><a class="button" href="https://t.me/MexCloudStore">Pesan Telegram</a></div>
+    <div class="item">Bodrex - $2<br><a class="button" href="https://t.me/MexCloudStore">Pesan Telegram</a></div>
+</div>
+
+<div class="category" onclick="toggle('rokok')">🚬 Rokok Indonesia</div>
+<div id="rokok" class="subcategory">
+    <div class="item">Gudang Garam - $18<br><a class="button" href="https://t.me/MexCloudStore">Pesan Telegram</a></div>
+</div>
+
+<div class="category" onclick="toggle('pod')">💨 Pod & Vape</div>
+<div id="pod" class="subcategory">
+
+    <div class="category" onclick="toggle('device')">Device</div>
+    <div id="device" class="product">
+        <div class="item">OXVA Xlim Pro - $35<br><a class="button" href="https://t.me/MexCloudStore">Pesan Telegram</a></div>
+    </div>
+
+    <div class="category" onclick="toggle('cartridge')">Cartridge</div>
+    <div id="cartridge" class="product">
+        <div class="item">OXVA Cartridge - $5<br><a class="button" href="https://t.me/MexCloudStore">Pesan Telegram</a></div>
+    </div>
+
+    <div class="category" onclick="toggle('liquid')">Liquid</div>
+    <div id="liquid" class="product">
+        <div class="item">Salt Nic - $7<br><a class="button" href="https://t.me/MexCloudStore">Pesan Telegram</a></div>
+    </div>
+
+</div>
+
+<div class="category" onclick="toggle('hp')">📱 Handphone</div>
+<div id="hp" class="subcategory">
+    <div class="item">Samsung S25 Ultra - $950<br><a class="button" href="https://t.me/MexCloudStore">Pesan Telegram</a></div>
+</div>
+
+</div>
+
+<script>
+function toggle(id){
+    var el = document.getElementById(id);
+    if(el.style.display === "block"){
+        el.style.display = "none";
+    } else {
+        el.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
